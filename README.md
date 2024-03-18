@@ -31,7 +31,7 @@ For Debian-based distributions (Ubuntu, Mint, Kali),  you can install NASM using
     sudo apt install nasm
 ```
 
-### Steps
+### Producing an Executable Steps
 
 1. Open Terminal.
 2. Navigate to the project directory.
