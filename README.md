@@ -60,16 +60,23 @@ For Debian-based distributions (Ubuntu, Mint, Kali),  you can install NASM using
     ```
 
 ## Issues/Notes
+### Targeted Linux Environment
+This project was specifically designed for Linux enviroments and utilises tools such as the Netwide Assembler (NASM) and linker (ld). Users on other operating systems, such as Windows or macOS, may 
+face challenges in executing the project as intended. 
+
+### 64-bit Specific
+The -f elf64 flag in the NASM command specifies that the output is targetd for a 64-bit Linux environment. Users on 32-bit systems may need to adjust this flag and be aware of potential compatibility issues.
 
 ### Input Edge Cases
 The programme is designed to accept only 23 characters. If more than 23 are input, the programme will truncate the excess characters.
 
 The programme is designed to work exclusively with ASCII characters and does not account for extended ASCII or Unicode characters. Should these characters be used, unexpected output may occur.
 
-###
+### Error Handling
+The program is designed to NOT provide feedback if something goes wrong, e.g., if an input is too long.
 
-This project is aimed at Linux environments and relies on tools such as NASM and ld, Users on other platforms (e.g., Windows or macOS) may encounter difficulties due to the tailoring of the project.
+### Comments
+The code is has been commented on nearly every line, so trying to paint a clear understanding of its operations.
 
-This program cannot swap the case of non-alphabetical characters, since the case swapping relies on adding or subtracting a value (32 in ASCII). Applying this operation to non-alphabetical/symbol characters can result in an unexpected outcome in the output.
+THis may help support a user or developer  in comprehending the the programme and so would enhance the ease of modification, debugging, and overall development.
 
-The -f elf64 flag in the NASM command specifies that the output should be for a 64-bit Linux environment. Users on 32-bit systems may need to adjust this flag and be aware of potential compatibility issues.
