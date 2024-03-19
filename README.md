@@ -78,5 +78,3 @@ This program is designed to NOT provide feedback if something goes wrong, e.g., 
 ### Comments
 The code actual has been commented on nearly every line, which should paint a clear understanding of operations.
 
-This may help support a user or developer in comprehending the the program.
-
