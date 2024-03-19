@@ -61,8 +61,14 @@ For Debian-based distributions (Ubuntu, Mint, Kali),  you can install NASM using
 
 ## Issues/Notes
 
-This program cannot swap the case of non-alphabetical characters, since the case swapping relies on adding or subtracting a value (32 in ASCII). Applying this operation to non-alphabetical/symbol characters can result in an unexpected outcome in the output.
+### Input Edge Cases
+The program is designed to only take in 23 characters. If more than 23 are used, the program will cut off the extra characters.
+The program is designed to work exclusivly with ASCII characters, and does not account for extended ASCII or Unicode characters. If these characters are used unexpected output may occur.
 
-As the project relies on tools such as NASM and ld, that means they are heavily dependent on the operating system in use and the environment. This project is aimed at Linux environments. Users on other platforms (e.g., Windows or macOS) may encounter difficulties due to the tailoring of the project for this reason.
+###
+
+This project is aimed at Linux environments and relies on tools such as NASM and ld, Users on other platforms (e.g., Windows or macOS) may encounter difficulties due to the tailoring of the project.
+
+This program cannot swap the case of non-alphabetical characters, since the case swapping relies on adding or subtracting a value (32 in ASCII). Applying this operation to non-alphabetical/symbol characters can result in an unexpected outcome in the output.
 
 The -f elf64 flag in the NASM command specifies that the output should be for a 64-bit Linux environment. Users on 32-bit systems may need to adjust this flag and be aware of potential compatibility issues.
