@@ -62,8 +62,9 @@ For Debian-based distributions (Ubuntu, Mint, Kali),  you can install NASM using
 ## Issues/Notes
 
 ### Input Edge Cases
-The program is designed to only take in 23 characters. If more than 23 are used, the program will cut off the extra characters.
-The program is designed to work exclusivly with ASCII characters, and does not account for extended ASCII or Unicode characters. If these characters are used unexpected output may occur.
+The programme is designed to accept only 23 characters. If more than 23 are input, the programme will truncate the excess characters.
+
+The programme is designed to work exclusively with ASCII characters and does not account for extended ASCII or Unicode characters. Should these characters be used, unexpected output may occur.
 
 ###
 
