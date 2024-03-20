@@ -74,17 +74,17 @@ swapcase:
     jg      .check_lowercase   ; Jump greater used here so if it is greater or after 'Z, it's definitley not an uppercase letter
 
     ; It's an uppercase letter, then swap the case
-    xor     al, 32             ; BY xoring 32 here it adds or subtracts 32 depending on what the value was at the start.
+    xor     al, 32             ; BY xoring 32 the case will be swapped around.
     jmp     .store             ; Jump to the label which stores the character
 
 .check_lowercase:
     cmp     al, 'a'            ; Check if the character is greater than or equal to 'a'
-    jl      .store             ; If it is less (before 'a'), it's not a letter, so no swap
+    jl      .store             ; If it is less (before 'a), it's not a letter, so no swap
     cmp     al, 'z'            ; Check if the character is less than or equal to 'z'
     jg      .store             ; If greater and so after z, it's not a lowercase letter
 
     ; It's a lowercase letter, swap it up
-    xor     al, 32             ; BY xoring 32 here it adds or subtracts 32 depending on what the value was at the start.
+    xor     al, 32             ; BY xoring 32 here the case will swap
 
 .store:
     mov     [rdi], al          ; Store the swapped character back into memory
