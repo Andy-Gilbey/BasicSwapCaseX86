@@ -16,6 +16,8 @@ This project is licensed under the GPL License - see the [LICENSE.md](LICENSE) f
 
 This project presents an x86 Assembly program which is designed to perform case swapping on input strings, and convert all lowercase letters to uppercase and vice versa. The transformation uses the ASCII character encoding scheme, where, for example, "Hello JOE!" would be converted to "hELLO joe!".
 
+The program prompts a user for a text input and then swaps the case of each character in the input. It then outputs the modified text to the screen. The case swapping is accomplished by utilising an XOR operation with the value of 32 on each character's ASCII code - Since the ASCII values of a character between upper and lowwer case differs by 32, the operation effectivley toggles the case.
+
 The program utilises the Netwide Assembler (NASM) for assembly on Linux environments. 
 
 ## Instructions on Producing an Executable
