@@ -58,7 +58,7 @@ _start:
     ; Exit the program
     xor     rdi, rdi            ; Exit status 0
     mov     rax, SYS_EXIT       ; System call number for exit
-    syscall                     ; 
+    syscall                     ; done
 
 ; Function: The swap case function where all the actual action goes
 swapcase:
